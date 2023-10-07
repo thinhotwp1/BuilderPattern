@@ -17,21 +17,22 @@ public class Main {
          */
 
         // Case success
-        DatabaseConfig databaseMysql = new DatabaseConfig.DatabaseConfigBuilder()
-                .setDatabaseType("mysql")
-                .setDatabaseName("blog")
-                .setUser("blog")
-                .setPassword("blog")
-                .build();
+        DatabaseConfig databaseMysql =
+                new DatabaseConfig.DatabaseConfigBuilder()
+                        .setDatabaseType("mysql")
+                        .setDatabaseName("blog")
+                        .setUser("blog")
+                        .setPassword("blog")
+                        .build();
         System.out.println("Database Mysql success: " + databaseMysql.toString());
 
 
         // Case fail, missing properties, throw exception
-        DatabaseConfig databaseMissingName = new DatabaseConfig.DatabaseConfigBuilder()
-                .setDatabaseType("mysql")
-                .setUser("blog")
-                .setPassword("blog")
-                .build();
-
+        DatabaseConfig databaseMissingName =
+                new DatabaseConfig.DatabaseConfigBuilder()
+                        .setDatabaseType("mysql")
+                        .setUser("blog")
+                        .setPassword("blog")
+                        .build();
     }
 }
